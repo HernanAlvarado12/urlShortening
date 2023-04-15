@@ -29,16 +29,9 @@ document.addEventListener('submit', async event => {
     try {
         const response = await fetch(`${URL_ROOTER}${link}`)
         const json = await response.json()
-        if(!json.ok)
-            throw new Error('Invalid request')
-        const fragment = document.createDocumentFragment()
-        const template = document.getElementById('shortTemplate').content
-        const { original_link, short_link } = json.result 
-        const clone = template.cloneNode(true)
-        clone.querySelector('article > span').textContent = original_link
-        clone.querySelector('article > p').textContent = short_link
-        clone.querySelector('article > button').setAttribute('data-write', short_link)
-        document.querySelector('form.flex + section.w-90').append(clone)
+        if(!json.ok) throw new Error('Invalid request')
+        addShortLink(json.result)
+       
     } catch(error) {
         inputLink.classList.add('invalid')
         inputLink.previousElementSibling.classList.remove('hidden')
@@ -57,6 +50,21 @@ matchMedia('(max-width: 899px)').addEventListener('change', event => {
 })
 
 
+const addShortLink = (json) => {
+    const fragment = document.createDocumentFragment()
+    const template = document.getElementById('shortTemplate').content
+    const { original_link, short_link } = json 
+    const clone = template.cloneNode(true)
+    clone.querySelector('article > span').textContent = original_link
+    clone.querySelector('article > p').textContent = short_link
+    clone.querySelector('article > button').setAttribute('data-write', short_link)
+    document.querySelector('form.flex + section.w-90').append(clone)
+}
+
+
+/**
+ * @returns {void}
+ */
 const statisticsConsumer = async () => {
     const response = await fetch('./data.json')
     const json = await response.json()
@@ -80,6 +88,7 @@ const statisticsConsumer = async () => {
 const consumer = ({ jsonData, templateSelector, parentSelector }) => {
     const fragment = document.createDocumentFragment()
     const template = document.getElementById(templateSelector).content
+    console.log(jsonData)
     jsonData.forEach(json => {
         const { title, content, path } = json
         const clone = template.cloneNode(true)
