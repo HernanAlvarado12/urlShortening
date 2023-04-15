@@ -1,0 +1,29 @@
+{
+  "name": "urlshortening",
+  "version": "1.0.0",
+  "description": "",
+  "main": "model.js",
+  "scripts": {
+    "build": "npx tailwindcss -i ./css/mobile.css -o ./css/tailwin.css --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HernanAlvarado12/urlShortening.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "tailwindcss",
+    "js"
+  ],
+  "author": "Hernan Alvarado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HernanAlvarado12/urlShortening/issues"
+  },
+  "type": "module",
+  "homepage": "https://github.com/HernanAlvarado12/urlShortening#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.3.1"
+  }
+}
