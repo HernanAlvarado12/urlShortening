@@ -12,27 +12,36 @@ export default {
         md: '900px'
       },
       spacing: {
+        '0.2': '0.2rem',
         '0.5': '0.5rem',
         '1': '1rem',
         '1.5': '1.5rem',
         '2': '2rem',
         '3': '3rem',
+        '3.5': '3.5rem',
         '4': '4rem',
         '5': '5rem',
         '6': '6rem',
+        '7': '7rem',
         '8': '8rem',
+        '9': '9rem',
         '10': '10rem',
+        '15': '15rem',
         '50': '50%',
         '85': '85%',
         '90': '90%'
+      },
+      gridTemplateColumns: {
+        shorter: '5.5fr 5fr'
       },
       fontSize: {
         xs: '1.4rem',
         sm: '1.6rem',
         md: '1.8rem',
         base: '2.4rem',
-        lg: '3.2rem',
-        xl: '4.2rem'
+        lg: '2.8rem',
+        xl: '4.2rem',
+        '2xl': '5.2rem'
       },
       borderRadius: {
         sm: '0.6rem',
