@@ -4,7 +4,7 @@
   "description": "",
   "main": "model.js",
   "scripts": {
-    "build": "npx tailwindcss -i ./css/mobile.css -o ./css/tailwin.css --watch"
+    "build": "npx tailwindcss -i ./css/mobile.css -o ./css/tailwind.css --watch"
   },
   "repository": {
     "type": "git",
