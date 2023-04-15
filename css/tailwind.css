@@ -563,6 +563,7 @@ html {
   order: 1;
 }
 
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -612,6 +613,7 @@ html {
 .hidden {
   display: none;
 }
+
 
 .aspect-square {
   aspect-ratio: 1 / 1;
@@ -832,6 +834,7 @@ html {
   color: hsl(257 7% 63% / var(--tw-text-opacity));
 }
 
+
 .text-violet-200 {
   --tw-text-opacity: 1;
   color: hsl(260 8% 14% / var(--tw-text-opacity));
@@ -842,10 +845,15 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.outline-none {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
+@media (hover: hover) and (pointer: fine) {
+  .hover\:text-violet-200:hover {
+    --tw-text-opacity: 1;
+    color: hsl(260 8% 14% / var(--tw-text-opacity));
+  }
+
+  .hover\:opacity-60:hover {
+    opacity: 0.6;
+  }
 
 @media (hover: hover) and (pointer: fine) {
   .hover\:opacity-60:hover {
@@ -865,9 +873,9 @@ html {
   }
 }
 
-@media (min-width: 724px) {
-  .xs\:right-0 {
-    right: 0px;
+@media (min-width: 768px) {
+  .md\:relative {
+    position: relative;
   }
 
   .xs\:top-0 {
