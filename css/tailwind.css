@@ -693,6 +693,21 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .hover\:text-violet-200:hover {
+    --tw-text-opacity: 1;
+    color: hsl(260 8% 14% / var(--tw-text-opacity));
+  }
+
+  .hover\:opacity-60:hover {
+    opacity: 0.6;
+  }
+
+  .group:hover .group-hover\:opacity-60 {
+    opacity: 0.6;
+  }
+}
+
 @media (min-width: 768px) {
   .md\:relative {
     position: relative;
