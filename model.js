@@ -1,7 +1,8 @@
-const URL = 'https://api.shrtco.de/v2/shorten?url='
+const URL_ROOTER = 'https://api.shrtco.de/v2/shorten?url='
 const menu =  document.querySelector('header > nav > menu')
 const iconMenu = document.querySelector('header > nav #iconMenu')
-
+const formElement = document.querySelector('main > form.flex.relative.overflow-hidden')
+const inputLink = document.querySelector('form.flex.relative.overflow-hidden > input')
 
 document.addEventListener('click', event => {
     /**
@@ -14,8 +15,17 @@ document.addEventListener('click', event => {
     }
 })
 
-document.addEventListener('submit', event => {
+document.addEventListener('submit', async event => {
     event.preventDefault()
+    const link = new FormData(formElement).get('link')
+    try {
+        const response = await fetch(`${URL_ROOTER}${link}`)
+        const json = await response.json()
+        inputLink.value = ''
+        console.log(json)
+    } catch(error) {
+
+    }
 })
 
 document.addEventListener('DOMContentLoaded', () => {
