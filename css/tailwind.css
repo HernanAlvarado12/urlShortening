@@ -702,10 +702,6 @@ html {
   .hover\:opacity-60:hover {
     opacity: 0.6;
   }
-
-  .group:hover .group-hover\:opacity-60 {
-    opacity: 0.6;
-  }
 }
 
 @media (min-width: 768px) {
@@ -736,6 +732,10 @@ html {
   .md\:w-max {
     width: -moz-max-content;
     width: max-content;
+  }
+
+  .md\:w-85 {
+    width: 85%;
   }
 
   .md\:max-w-\[13rem\] {
