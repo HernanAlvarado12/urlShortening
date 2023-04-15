@@ -897,6 +897,26 @@ html {
   }
 }
 
+
+@media (hover: hover) and (pointer: fine) {
+  .hover\:opacity-60:hover {
+    opacity: 0.6;
+  }
+
+  .hover\:backdrop-opacity-20:hover {
+    --tw-backdrop-opacity: opacity(0.2);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hover\:text-cyan:hover {
+    --tw-text-opacity: 1;
+    color: hsl(180 66% 49% / var(--tw-text-opacity));
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:grid-cols-shorter {
     grid-template-columns: 5.5fr 5fr;
