@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {
       screens: {
+        xs: '724px',
         md: '900px'
       },
       spacing: {
