@@ -881,9 +881,26 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.outline-none {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
+@media (hover: hover) and (pointer: fine) {
+  .hover\:text-violet-200:hover {
+    --tw-text-opacity: 1;
+    color: hsl(260 8% 14% / var(--tw-text-opacity));
+  }
+
+  .hover\:opacity-60:hover {
+    opacity: 0.6;
+  }
+
+@media (hover: hover) and (pointer: fine) {
+  .hover\:opacity-60:hover {
+    opacity: 0.6;
+  }
+
+  .hover\:backdrop-opacity-20:hover {
+    --tw-backdrop-opacity: opacity(0.2);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  }
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -899,9 +916,9 @@ html {
   }
 }
 
-@media (min-width: 724px) {
-  .xs\:right-0 {
-    right: 0px;
+@media (min-width: 768px) {
+  .md\:relative {
+    position: relative;
   }
 
   .xs\:top-0 {
@@ -1020,6 +1037,7 @@ html {
   .md\:max-w-\[13rem\] {
     max-width: 13rem;
   }
+
 
   .md\:max-w-screen-lg {
     max-width: 1024px;
