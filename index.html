@@ -63,14 +63,28 @@
                     <button class ="w-3/4 h-4 max-w-sm text-white text-md font-bold capitalize rounded-full bg-cyan md:w-[18rem] hover:opacity-60">get started</button>
                 </div>
             </article>
-            <form class ="my-8 p-2 flex items-center flex-col gap-y-1 relative text-sm rounded-md overflow-hidden bg-violet xs:py-3 xs:px-4 xs:flex-row xs:gap-x-1 md:gap-x-2">
-                <picture>
-                    <source media ="(min-width: 724px)" srcset ="./assets/shorten-desktop.svg">
-                    <img class ="absolute -top-3 -right-2 xs:w-full xs:h-full xs:top-0 xs:right-0" src ="./assets/shorten-mobile.svg" alt ="pattern">
-                </picture>
-                <input class ="w-full h-4 text-violet-100 indent-1.5 outline-none z-10 rounded-sm border xs:w-3/4" type ="text" name ="link" placeholder ="Shorten a link here...">
-                <input class ="w-full h-4 text-white z-10 rounded-sm bg-cyan xs:w-1/4" type ="submit" value ="Shorten it!">
-            </form>
+            <section class ="my-8">
+                <form class ="p-2 flex items-center flex-col gap-y-1 relative text-sm rounded-md overflow-hidden bg-violet xs:py-3 xs:px-4 xs:flex-row xs:gap-x-1 md:gap-x-2">
+                    <picture>
+                        <source media ="(min-width: 724px)" srcset ="./assets/shorten-desktop.svg">
+                        <img class ="absolute -top-3 -right-2 xs:w-full xs:h-full xs:top-0 xs:right-0" src ="./assets/shorten-mobile.svg" alt ="pattern">
+                    </picture>                   
+                    <label class ="w-full relative z-10 xs:w-3/4">
+                        <span class ="hidden text-red text-min italic absolute top-[4.5rem] left-0">Please add a link</span>
+                        <input class ="w-full h-4 text-violet-100 relative indent-1.5 outline-none z-10 rounded-sm border-2 border-transparent" type ="text" name ="link" placeholder ="Shorten a link here..." autocomplete ="off">
+                    </label>
+                    <input class ="w-full h-4 text-white text-sm font-bold z-10 rounded-sm bg-cyan xs:w-1/4" type ="submit" value ="Shorten it!">                
+                </form>
+                <section class ="w-90 mx-auto mt-3 flex items-center flex-col gap-y-3 text-xs">                    
+                    <template id ="shortTemplate">
+                        <article class ="w-full md:grid md:grid-cols-shorten md:items-center lg:grid-cols-shortenlg lg:gap-x-2">
+                            <span class ="md:order-2 lg:-order-1"></span>
+                            <p class ="mt-1.5 mb-1 text-cyan"></p>
+                            <button class ="w-full h-4 text-white text-sm font-bold rounded-sm bg-cyan md:w-10" data-write="">Copy</button>
+                        </article>
+                    </template>                    
+                </section>
+            </section>
             <section class ="text-center">
                 <h2 class ="text-violet-200 text-lg font-bold">Advanced Statistics</h2>
                 <p class ="max-w-4xl mx-auto mt-2 mb-4 text-gray text-sm">
@@ -80,7 +94,7 @@
                 <section class ="w-90 mx-auto flex items-center flex-col gap-y-3 md:flex-row md:gap-x-2 md:text-start" id ="statisticsSection">
                     <template id ="statisticsTemplate">
                         <article class ="max-w-2xl md:odd:translate-y-4 md:last:translate-y-8">
-                            <figure class ="w-7 flex items-center justify-center aspect-square rounded-full bg-violet">
+                            <figure class ="w-7 mx-auto flex items-center justify-center aspect-square rounded-full bg-violet">
                                 <img class ="w-3 h-3 mx-auto" alt ="picture of statistics">
                             </figure>
                             <h3 class ="mt-2 mb-1 text-violet-200 text-base font-bold md:text-md"></h3>

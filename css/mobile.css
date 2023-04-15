@@ -28,6 +28,13 @@
         margin: 0.3rem 0;
     }
 
+    input:-webkit-autofill:is(:hover,:focus, :active),
+    input:-webkit-autofill {
+        -webkit-text-fill-color: hsl(257, 7%, 63%);
+        -webkit-box-shadow: 0 0 0 5rem white inset !important;
+    }
+
+
     #iconMenu > span:is(:nth-child(1), :nth-child(3)) {
         transition: rotate 300ms, transform 300ms 300ms;
     }
@@ -46,5 +53,16 @@
         transform: translateY(0);
         rotate: 135deg;
         transition: transform 300ms, rotate 300ms 300ms;
+    }
+
+    input.invalid {
+        margin-bottom: 3rem;
+        border-color: hsl(0, 87%, 67%);
+    }
+
+    @media (min-width: 724px) {
+        input.invalid {
+            margin: 0;
+        }
     }
 }

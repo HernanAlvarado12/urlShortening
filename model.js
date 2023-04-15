@@ -1,8 +1,9 @@
 const URL_ROOTER = 'https://api.shrtco.de/v2/shorten?url='
 const menu =  document.querySelector('header > nav > menu')
 const iconMenu = document.querySelector('header > nav #iconMenu')
-const formElement = document.querySelector('main > form.flex.relative.overflow-hidden')
-const inputLink = document.querySelector('form.flex.relative.overflow-hidden > input')
+const formElement = document.querySelector('main form.flex.relative.overflow-hidden')
+const inputLink = document.querySelector('form.flex.relative.overflow-hidden > label > input')
+
 
 document.addEventListener('click', event => {
     /**
@@ -12,6 +13,13 @@ document.addEventListener('click', event => {
     if(target.matches('#iconMenu, #iconMenu > span')) {
         menu.classList.toggle('hidden')
         iconMenu.classList.toggle('active')
+    }else if(target.matches('form.flex.relative.overflow-hidden > label > input.invalid')) {
+        inputLink.classList.remove('invalid')
+        inputLink.previousElementSibling.classList.add('hidden')
+    }else if(target.matches('form.flex + section.w-90 > article > button')) {
+        navigator.clipboard.writeText(target.getAttribute('data-write'))
+        target.textContent = 'Copied!'
+        target.classList.add('bg-violet')
     }
 })
 
@@ -21,10 +29,21 @@ document.addEventListener('submit', async event => {
     try {
         const response = await fetch(`${URL_ROOTER}${link}`)
         const json = await response.json()
-        inputLink.value = ''
-        console.log(json)
+        if(!json.ok)
+            throw new Error('Invalid request')
+        const fragment = document.createDocumentFragment()
+        const template = document.getElementById('shortTemplate').content
+        const { original_link, short_link } = json.result 
+        const clone = template.cloneNode(true)
+        clone.querySelector('article > span').textContent = original_link
+        clone.querySelector('article > p').textContent = short_link
+        clone.querySelector('article > button').setAttribute('data-write', short_link)
+        document.querySelector('form.flex + section.w-90').append(clone)
     } catch(error) {
-
+        inputLink.classList.add('invalid')
+        inputLink.previousElementSibling.classList.remove('hidden')
+    } finally {
+        inputLink.value = ''
     }
 })
 

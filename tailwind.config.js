@@ -32,9 +32,12 @@ export default {
         '90': '90%'
       },
       gridTemplateColumns: {
-        shorter: '5.5fr 5fr'
+        shorter: '5.5fr 5fr',
+        shorten: '1fr auto',
+        shortenlg: '1fr auto auto'
       },
       fontSize: {
+        min: '1.2rem',
         xs: '1.4rem',
         sm: '1.6rem',
         md: '1.8rem',
