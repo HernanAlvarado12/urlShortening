@@ -765,6 +765,37 @@ html {
   outline-offset: 2px;
 }
 
+@media (hover: hover) and (pointer: fine) {
+  .hover\:bg-opacity-70:hover {
+    --tw-bg-opacity: 0.7;
+  }
+
+  .hover\:bg-opacity-20:hover {
+    --tw-bg-opacity: 0.2;
+  }
+
+  .hover\:opacity-60:hover {
+    opacity: 0.6;
+  }
+
+  .hover\:backdrop-opacity-60:hover {
+    --tw-backdrop-opacity: opacity(0.6);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  }
+
+  .hover\:backdrop-opacity-20:hover {
+    --tw-backdrop-opacity: opacity(0.2);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  }
+
+  .hover\:backdrop-filter:hover {
+    -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+            backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:grid-cols-shorter {
     grid-template-columns: 5.5fr 5fr;
@@ -849,21 +880,6 @@ html {
   .md\:gap-x-2 {
     -moz-column-gap: 2rem;
          column-gap: 2rem;
-  }
-
-  .md\:gap-x-4 {
-    -moz-column-gap: 4rem;
-         column-gap: 4rem;
-  }
-
-  .md\:gap-x-3 {
-    -moz-column-gap: 3rem;
-         column-gap: 3rem;
-  }
-
-  .md\:gap-x-2\.5 {
-    -moz-column-gap: 0.625rem;
-         column-gap: 0.625rem;
   }
 
   .md\:text-start {
