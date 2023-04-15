@@ -30,7 +30,7 @@ const consumer = ({ jsonData, templateSelector, parentSelector }) => {
     jsonData.forEach(json => {
         const { title, content, path } = json
         const clone = template.cloneNode(true)
-        clone.querySelector('article > img').setAttribute('src', path)        
+        clone.querySelector('article figure img').setAttribute('src', path)        
         clone.querySelector('article > h3').textContent = title        
         clone.querySelector('article > p').textContent = content  
         fragment.append(clone)      

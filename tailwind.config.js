@@ -8,6 +8,7 @@ export default {
   theme: {
     extend: {
       screens: {
+        xs: '724px',
         md: '900px'
       },
       spacing: {
@@ -19,11 +20,16 @@ export default {
         '4': '4rem',
         '5': '5rem',
         '6': '6rem',
+        '7': '7rem',
         '8': '8rem',
         '10': '10rem',
+        '15': '15rem',
         '50': '50%',
         '85': '85%',
         '90': '90%'
+      },
+      gridTemplateColumns: {
+        shorter: '5.5fr 5fr'
       },
       fontSize: {
         xs: '1.4rem',
@@ -31,7 +37,8 @@ export default {
         md: '1.8rem',
         base: '2.4rem',
         lg: '2.8rem',
-        xl: '4.2rem'
+        xl: '4.2rem',
+        '2xl': '5.2rem'
       },
       borderRadius: {
         sm: '0.6rem',
