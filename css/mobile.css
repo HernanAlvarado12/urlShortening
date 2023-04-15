@@ -14,4 +14,24 @@
         font-size: 62.5%;
         font-family: 'Poppins', sans-serif;
     }
+
+    #iconMenu > span:is(:nth-child(1), :nth-child(3)) {
+        transition: rotate 300ms, transform 300ms 300ms;
+    }
+    
+    #iconMenu.active > span:nth-child(1) {
+        transform: translateY(0);
+        rotate: 45deg;
+        transition: transform 300ms, rotate 300ms 300ms;
+    }
+
+    #iconMenu.active > span:nth-child(2) {
+        scale: 0 1;
+    }
+
+    #iconMenu.active > span:nth-child(3) {
+        transform: translateY(0);
+        rotate: 135deg;
+        transition: transform 300ms, rotate 300ms 300ms;
+    }
 }

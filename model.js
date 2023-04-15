@@ -1,6 +1,30 @@
+const URL = 'https://api.shrtco.de/v2/shorten?url='
+const menu =  document.querySelector('header > nav > menu')
+const iconMenu = document.querySelector('header > nav #iconMenu')
+
+
+document.addEventListener('click', event => {
+    /**
+     * @type {Element}
+     */
+    const target = event.target
+    if(target.matches('#iconMenu, #iconMenu > span')) {
+        menu.classList.toggle('hidden')
+        iconMenu.classList.toggle('active')
+    }
+})
+
+document.addEventListener('submit', event => {
+    event.preventDefault()
+})
 
 document.addEventListener('DOMContentLoaded', () => {
     statisticsConsumer()
+})
+
+matchMedia('(max-width: 899px)').addEventListener('change', event => {
+    menu.classList.add('hidden')
+    iconMenu.classList.remove('active')
 })
 
 

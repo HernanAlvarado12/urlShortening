@@ -48,6 +48,9 @@ export default {
         md: '0.8rem',
         lg: '1rem'
       },
+      transitionDuration: {
+        400: '400ms'
+      },
       colors: {
         gray: 'hsl(0, 0%, 75%)',
         red: 'hsl(0, 87%, 67%)',
