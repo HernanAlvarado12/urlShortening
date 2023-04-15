@@ -29,6 +29,45 @@
 
     <body>
         
+        <main class ="w-90 mx-auto mb-10">
+            <article class ="flex items-center justify-center flex-col gap-y-1.5 text-center">
+                <img src ="./assets/working.svg" alt ="picture">
+                <h1 class ="text-violet-200 text-xl font-bold">Mire than just shorter links</h1>
+                <p class ="text-gray text-sm">
+                    Build your brand’s recognition and get detailed insights  on how your links are 
+                    performing.
+                </p>
+                <button class ="w-3/4 h-4 text-white text-md font-bold capitalize rounded-full bg-cyan">get started</button>
+            </article>
+            <form class ="my-8 p-2 flex items-center flex-col gap-y-1 relative text-sm rounded-md overflow-hidden bg-violet">
+                <img class ="absolute -top-3 -right-2" src ="./assets/shorten-mobile.svg" alt ="pattern">
+                <input class ="w-full h-4 text-violet-100 indent-1.5 outline-none z-10 rounded-sm" type ="text" name ="" placeholder ="Shorten a link here...">
+                <input class ="w-full h-4 text-white z-10 rounded-sm bg-cyan" type ="submit" value ="Shorten it!">
+            </form>
+            <section class ="text-center">
+                <h2 class ="text-violet-200 text-lg font-bold">Advanced Statistics</h2>
+                <p class ="mt-2 mb-4 text-gray text-sm">
+                    Track how your links are performing across the web with our advanced statistics 
+                    dashboard.
+                </p>
+                <section class ="w-90 mx-auto flex items-center flex-col gap-y-3" id ="statisticsSection">
+                    <template id ="statisticsTemplate">
+                        <article>
+                            <img class ="mx-auto" alt ="picture of statistics">
+                            <h3 class ="mt-2 mb-1 text-violet-200 text-base font-bold"></h3>
+                            <p class ="text-gray text-sm"></p>
+                        </article>
+                    </template>
+                </section>                
+            </section>            
+        </main>
+        <section class ="py-8 flex items-center justify-center relative overflow-hidden bg-violet">
+            <div class ="text-center z-10">
+                <h3 class ="mb-2 text-white text-lg font-bold">Boost your links today</h3>
+                <button class ="w-3/4 h-4 text-white text-md font-bold capitalize rounded-full bg-cyan">get started</button>                    
+            </div>
+            <img class ="absolute" src ="./assets/boost-mobile.svg" alt ="pattern">
+        </section>
 
         <script src ="./model.js" type ="module"></script>
     </body>
