@@ -649,6 +649,10 @@ html {
   flex-direction: column;
 }
 
+.place-content-center {
+  place-content: center;
+}
+
 .items-center {
   align-items: center;
 }
@@ -680,6 +684,7 @@ html {
 .rounded-sm {
   border-radius: 0.6rem;
 }
+
 
 .bg-cyan {
   --tw-bg-opacity: 1;
